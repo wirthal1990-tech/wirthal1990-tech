@@ -1,38 +1,35 @@
-# Technische Automatisierung mit nachvollziehbarer Übergabe
+# KI-Automatisierung, Integrationen und technische Übergabe
 
-Ich strukturiere klar abgegrenzte technische Aufgaben und steuere ihre KI-gestützte Umsetzung: Schnittstellen (APIs, über die Programme Daten austauschen), Workflows und Qualitätssicherung. Tests, menschliche Freigaben und eine dokumentierte Übergabe gehören zur Arbeitsweise.
+Ich strukturiere technische Anforderungen, steuere ihre KI-gestützte Umsetzung und prüfe die Ergebnisse anhand von Tests, klaren Freigaben und nachvollziehbaren Nachweisen. Mein Schwerpunkt liegt auf Workflows, API-Integrationen und der sauberen Übergabe technischer Systeme.
 
-## Drei technische Belege
+## Öffentliche technische Beispiele
 
-**1. Kontrollierte Agent-Freigabe — synthetische Demo, PROPOSED**
+### Kontrollierte Freigabe vor einer Aktion
 
-Ein kleines Offline-Beispiel bindet eine Freigabe an den SHA-256-Hash, den Inhaltsfingerabdruck genau einer Anfrage. Eine geänderte Anfrage, fehlende oder abgelaufene Zustimmung und eine wiederholte Ausführung werden verweigert. Die Aktion schreibt ausschließlich in einen virtuellen Speicher. Der Entwurf ist lokal getestet; ein öffentlicher Link folgt erst nach einer gesonderten Veröffentlichung.
+[**Control before action – Code und Tests**](https://github.com/wirthal1990-tech/controlled-automation-showcase/tree/main/agent-approval-demo)
 
-**2. Evidence before go — synthetische Demo, PROPOSED**
+Eine kleine Python-Demo zeigt, wie sich eine simulierte Freigabe an den konkreten Inhalt einer Anfrage binden lässt. Manipulierte, abgelaufene oder bereits verwendete Freigaben werden abgewiesen. Alle Aktionen bleiben im Arbeitsspeicher – ohne echte Konten oder externe Zugriffe.
 
-Fehlende oder widersprüchliche Belege führen zu `NO_GO`, also einem Ausführungsstopp. Vollständige Belege erlauben zunächst nur `REVIEW_REQUIRED`, die menschliche Prüfung. Auch danach benötigt eine simulierte Freigabe eine eigene, an die Eingaben gebundene Zustimmung. Keine echten Unternehmen, Kontakte oder externen Aktionen. Der Entwurf ist lokal getestet; für diese Fassung ist noch kein öffentliches Repository bestätigt.
+### Belege vor einer Entscheidung
 
-Die beiden Entwürfe gehören zum vorgeschlagenen Paket `controlled-automation-showcase`. Nach Erhalt einer freigegebenen Kopie laufen sie ohne Zusatzpakete mit Python 3.11 oder neuer:
+[**Evidence before go – Code und Tests**](https://github.com/wirthal1990-tech/controlled-automation-showcase/tree/main/revops-evidence-demo)
 
-```sh
-python3 -B -m unittest discover -s agent-approval-demo -p 'test_*.py' -v
-python3 -B -m unittest discover -s revops-evidence-demo -p 'test_*.py' -v
-```
+Dieses Beispiel trennt technische Belege, Bewertung und Freigabe. Fehlende, negative oder widersprüchliche Angaben führen zu `NO_GO`. Vollständige Angaben erlauben zunächst eine Prüfung; eine simulierte Freigabe ist zusätzlich erforderlich.
 
-Die Befehle werden im Demo-Hauptverzeichnis ausgeführt. Tatsächlich geprüft wurde Python 3.14.8; weitere Python-Versionen sind bislang ungetestet.
+[**Beide Demos ausprobieren und Tests reproduzieren**](https://github.com/wirthal1990-tech/controlled-automation-showcase#lokal-ausprobieren)
 
-**3. Ethno-API — vorhandenes öffentliches Daten-Sample**
+### Ethno-API – Datenaufbereitung und Qualitätssicherung
 
-Das öffentliche Projekt enthält ein laut seiner Dokumentation 400 Einträge umfassendes Beispiel:
-[USDA Phytochemical Database JSON](https://github.com/wirthal1990-tech/USDA-Phytochemical-Database-JSON),
-[JSON-Sample](https://github.com/wirthal1990-tech/USDA-Phytochemical-Database-JSON/blob/main/ethno_sample_400.json),
-[Parquet-Sample](https://github.com/wirthal1990-tech/USDA-Phytochemical-Database-JSON/blob/main/ethno_sample_400.parquet).
-Die [Methodik](https://github.com/wirthal1990-tech/USDA-Phytochemical-Database-JSON/blob/main/METHODOLOGY.md) und [Lizenz-/Attributionsangaben](https://github.com/wirthal1990-tech/USDA-Phytochemical-Database-JSON/blob/main/LICENSE) stehen im Originalprojekt. Dort wird für öffentliche Samples CC BY 4.0 angegeben, soweit nicht anders ausgewiesen. Hier werden ausschließlich Links gesetzt. Keine eigene Freigabe für Derivate oder weitere Drittquellen; die Eintragszahl beweist keine wissenschaftliche Validierung.
+[**Öffentliches Daten-Sample auf GitHub**](https://github.com/wirthal1990-tech/USDA-Phytochemical-Database-JSON) mit dokumentierter [Methodik](https://github.com/wirthal1990-tech/USDA-Phytochemical-Database-JSON/blob/main/METHODOLOGY.md), [JSON-Beispiel](https://github.com/wirthal1990-tech/USDA-Phytochemical-Database-JSON/blob/main/ethno_sample_400.json) und [Parquet-Beispiel](https://github.com/wirthal1990-tech/USDA-Phytochemical-Database-JSON/blob/main/ethno_sample_400.parquet). Das Sample ist ein reproduzierbarer Ausschnitt; es ersetzt keine unabhängige wissenschaftliche Validierung.
 
-## Arbeitsweise und Grenzen
+## Eigene Projekte und meine Rolle
 
-Aufgabe und Abnahmekriterien eingrenzen, kleine Umsetzung mit KI-Werkzeugen steuern, positive und negative Tests prüfen, externe Änderungen durch Menschen freigeben lassen und Ergebnisse mit Grenzen übergeben.
+Auf [alex-wirth.de/proof/](https://alex-wirth.de/proof/) beschreibe ich vier eigene Projekte: die Arbeitsplattform AgentOS, an der ich weiterentwickle, eine Content-Automation mit menschlicher Freigabe, das Headless-Commerce-System für MysticHerbals und die Ethno-API-Datenpipeline. Bei diesen Projekten verantworte ich die Eingrenzung der Aufgaben, die Steuerung der KI-gestützten Umsetzung, die Prüfung und die technische Übergabe.
 
-Die Demos zeigen eng begrenzte Kontrolllogik. Sie belegen weder produktive Agent-Systeme noch eine laufende Geschäftspipeline, Kundenresultate oder unabhängige manuelle Softwareentwicklung. Code und Texte entstanden mit KI-Unterstützung; die Verantwortung für Prüfung und Veröffentlichung bleibt beim Menschen.
+Die beiden hier veröffentlichten Python-Demos sind **eigenständige synthetische Beispiele**, keine Auszüge aus privaten AgentOS-/RevOps-Systemen und kein Nachweis produktiver Agenten oder Kundenresultate. Code und Texte entstanden mit KI-Unterstützung. Die hier nachvollziehbaren Fähigkeiten liegen in der technischen Strukturierung, Steuerung und überprüfbaren Abnahme; daraus leite ich keine unabhängig manuelle Programmiererfahrung ab.
 
-Website und einziger Kontaktweg: [alex-wirth.de](https://alex-wirth.de/)
+## Für Betriebe in Senden, Neu-Ulm und Ulm
+
+Für inhabergeführte Betriebe aus der Region schaue ich mir wiederkehrende Büro- und Dokumentenarbeit an und automatisiere passende Schritte – mit Tests und einer Freigabe durch Sie. Mehr dazu: [alex-wirth.de/automatisierung-ulm-neu-ulm/](https://alex-wirth.de/automatisierung-ulm-neu-ulm/)
+
+**Website und Kontakt:** [alex-wirth.de](https://alex-wirth.de/)
