@@ -24,9 +24,13 @@ Dieses Beispiel trennt technische Belege, Bewertung und Freigabe. Fehlende, nega
 
 ## Eigene Projekte und meine Rolle
 
-Auf [alex-wirth.de/proof/](https://alex-wirth.de/proof/) beschreibe ich vier eigene Projekte: die Arbeitsplattform AgentOS, an der ich weiterentwickle, eine Content-Automation mit menschlicher Freigabe, das Headless-Commerce-System für MysticHerbals und die Ethno-API-Datenpipeline. Bei diesen Projekten verantworte ich die Eingrenzung der Aufgaben, die Steuerung der KI-gestützten Umsetzung, die Prüfung und die technische Übergabe.
+Auf [alex-wirth.de/proof/](https://alex-wirth.de/proof/) beschreibe ich vier eigene Projekte, jeweils mit ihrem eigenen Stand: die Arbeitsplattform AgentOS, an der ich weiterentwickle, eine Content-Automation mit menschlicher Freigabe, das Headless-Commerce-System für MysticHerbals und die Ethno-API-Datenpipeline. Was in einem Projekt umgesetzt, getestet oder noch offen ist, steht auf der jeweiligen Projektseite und wird hier nicht pauschal zusammengefasst.
 
-Die beiden hier veröffentlichten Python-Demos sind **eigenständige synthetische Beispiele**, keine Auszüge aus privaten AgentOS-/RevOps-Systemen und kein Nachweis produktiver Agenten oder Kundenresultate. Code und Texte entstanden mit KI-Unterstützung. Die hier nachvollziehbaren Fähigkeiten liegen in der technischen Strukturierung, Steuerung und überprüfbaren Abnahme; daraus leite ich keine unabhängig manuelle Programmiererfahrung ab.
+- **Meine Arbeitsweise:** Ich grenze Aufgaben ein, steuere die KI-gestützte Umsetzung, prüfe Ergebnisse mit Tests und Freigaben und dokumentiere die Übergabe.
+- **Öffentlich nachprüfbar** sind die beiden Demos mit ihren Tests, das Ethno-API-Daten-Sample und die Projektbeschreibungen mit ihrem angegebenen Stand.
+- **Nicht damit belegt** ist eigenständiges manuelles Programmieren ohne KI-Unterstützung. Code und Texte entstehen KI-gestützt; Entscheidungen und Prüfung liegen bei mir.
+
+Die beiden hier veröffentlichten Python-Demos sind **eigenständige synthetische Beispiele**, keine Auszüge aus privaten AgentOS-/RevOps-Systemen und kein Nachweis produktiver Agenten oder Kundenresultate.
 
 ## Für Betriebe in Senden, Neu-Ulm und Ulm
 
